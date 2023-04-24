@@ -1,0 +1,57 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = 'hatchling.build'
+
+[project]
+name = "libcst-mypy"
+version = "0.0.0"
+description = "Infer types to be used for codemods using mypy! :sparkles:"
+readme = "README.md"
+authors = [{ name = "Marcelo Trylesinski", email = "marcelotryle@email.com" }]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+license = "MIT"
+requires-python = ">=3.7"
+dependencies = ["libcst>=0.4.9", "mypy>=1.1.1"]
+optional-dependencies = {}
+
+[project.urls]
+Homepage = "https://github.com/Kludex/libcst-mypy"
+Source = "https://github.com/Kludex/libcst-mypy"
+Twitter = "https://twitter.com/marcelotryle"
+Funding = "https://github.com/sponsors/Kludex"
+
+[tool.hatch.envs.libcst_mypy]
+type = "virtual"
+
+[[tool.hatch.envs.test.matrix]]
+python = ["3.8", "3.9", "3.10", "3.11"]
+
+[tool.mypy]
+strict = true
+show_error_codes = true
+
+[tool.black]
+target-version = ["py37"]
+
+[tool.pytest.ini_options]
+addopts = ["--strict-config", "--strict-markers"]
+filterwarnings = ["error"]
+
+[tool.coverage.run]
+source_pkgs = ["libcst_mypy", "tests"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true

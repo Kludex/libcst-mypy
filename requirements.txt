@@ -1,0 +1,16 @@
+-e .
+
+# Linter & Formatter
+black
+mypy
+ruff
+pre-commit
+
+# Tests
+coverage[toml]
+pytest
+pytest-sugar
+dirty-equals
+
+# Development
+bpython

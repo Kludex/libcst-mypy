@@ -1,0 +1,18 @@
+{
+  "template": "git@github.com:Kludex/python-template.git",
+  "commit": "2a6e40fa5b9da75e30b01ef23d5fadc006d8e42d",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_slug": "mypy-type-inference",
+      "package": "mypy_type_inference",
+      "description": "Infer types to be used for codemods using mypy! :sparkles:",
+      "full_name": "Marcelo Trylesinski",
+      "email": "marcelotryle@email.com",
+      "github": "Kludex",
+      "twitter": "marcelotryle",
+      "_template": "git@github.com:Kludex/python-template.git"
+    }
+  },
+  "directory": null
+}
