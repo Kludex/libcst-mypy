@@ -4,7 +4,7 @@ build-backend = 'hatchling.build'
 
 [project]
 name = "libcst-mypy"
-version = "0.0.0"
+version = "0.1.0"
 description = "Infer types to be used for codemods using mypy! :sparkles:"
 readme = "README.md"
 authors = [{ name = "Marcelo Trylesinski", email = "marcelotryle@email.com" }]
