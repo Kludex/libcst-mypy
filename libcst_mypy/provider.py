@@ -46,11 +46,10 @@ class MypyTypeInferenceProvider(
         cache = {}
         for path in paths:
             module = calculate_module_and_package(str(root_path), path).name
-            mypy_file = mypy_result.graph[module].tree
-            if mypy_file is not None:
-                cache[path] = MypyTypeInferenceProviderCache(
-                    module_name=module, mypy_file=mypy_file
-                )
+            cache[path] = MypyTypeInferenceProviderCache(
+                module_name=module,
+                mypy_file=mypy_result.graph[module].tree,  # type: ignore[arg-type]
+            )
         return cache
 
     def __init__(self, cache: Optional[MypyTypeInferenceProviderCache]) -> None:
