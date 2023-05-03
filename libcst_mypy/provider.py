@@ -49,7 +49,7 @@ class MypyTypeInferenceProvider(
             mypy_file = mypy_result.graph.get(module)
             if mypy_file is not None and mypy_file.tree is not None:
                 cache[path] = MypyTypeInferenceProviderCache(
-                    module_name=module, mypy_file=mypy_file  # type: ignore[arg-type]
+                    module_name=module, mypy_file=mypy_file.tree
                 )
         return cache
 
